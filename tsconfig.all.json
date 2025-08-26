@@ -59,6 +59,9 @@
             "path": "./packages/wallets/krystal/tsconfig.json"
         },
         {
+            "path": "./packages/wallets/lazor-kit/tsconfig.json"
+        },
+        {
             "path": "./packages/wallets/ledger/tsconfig.json"
         },
         {

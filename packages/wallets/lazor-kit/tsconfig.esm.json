@@ -8,9 +8,6 @@
     "references": [
         {
             "path": "../../core/base"
-        },
-        {
-            "path": "../lazor-kit"
         }
     ]
 }

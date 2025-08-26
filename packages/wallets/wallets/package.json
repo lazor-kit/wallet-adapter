@@ -48,6 +48,7 @@
         "@solana/wallet-adapter-hyperpay": "workspace:^",
         "@solana/wallet-adapter-keystone": "workspace:^",
         "@solana/wallet-adapter-krystal": "workspace:^",
+        "@solana/wallet-adapter-lazor-kit": "workspace:^",
         "@solana/wallet-adapter-ledger": "workspace:^",
         "@solana/wallet-adapter-mathwallet": "workspace:^",
         "@solana/wallet-adapter-neko": "workspace:^",

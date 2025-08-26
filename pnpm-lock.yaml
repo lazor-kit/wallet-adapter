@@ -505,6 +505,25 @@ importers:
         specifier: ^0.4.0
         version: 0.4.0
 
+  packages/wallets/lazor-kit:
+    dependencies:
+      '@lazorkit/wallet':
+        specifier: ^1.4.9
+        version: 1.4.9(@types/react@19.1.7)(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.2.0(react@19.1.0))(utf-8-validate@5.0.10)
+      '@solana/wallet-adapter-base':
+        specifier: workspace:^
+        version: link:../../core/base
+      buffer:
+        specifier: ^6.0.3
+        version: 6.0.3
+    devDependencies:
+      '@solana/web3.js':
+        specifier: ^1.98.2
+        version: 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      shx:
+        specifier: ^0.4.0
+        version: 0.4.0
+
   packages/wallets/ledger:
     dependencies:
       '@ledgerhq/devices':
@@ -904,6 +923,9 @@ importers:
       '@solana/wallet-adapter-krystal':
         specifier: workspace:^
         version: link:../krystal
+      '@solana/wallet-adapter-lazor-kit':
+        specifier: workspace:^
+        version: link:../lazor-kit
       '@solana/wallet-adapter-ledger':
         specifier: workspace:^
         version: link:../ledger
@@ -1259,6 +1281,20 @@ packages:
 
   '@changesets/write@0.4.0':
     resolution: {integrity: sha512-CdTLvIOPiCNuH71pyDu3rA+Q0n65cmAbXnwWH84rKGiFumFzkmHNT8KHTMEchcxN+Kl8I54xGUhJ7l3E7X396Q==}
+
+  '@coral-xyz/anchor-errors@0.31.1':
+    resolution: {integrity: sha512-NhNEku4F3zzUSBtrYz84FzYWm48+9OvmT1Hhnwr6GnPQry2dsEqH/ti/7ASjjpoFTWRnPXrjAIT1qM6Isop+LQ==}
+    engines: {node: '>=10'}
+
+  '@coral-xyz/anchor@0.31.1':
+    resolution: {integrity: sha512-QUqpoEK+gi2S6nlYc2atgT2r41TT3caWr/cPUEL8n8Md9437trZ68STknq897b82p5mW0XrTBNOzRbmIRJtfsA==}
+    engines: {node: '>=17'}
+
+  '@coral-xyz/borsh@0.31.1':
+    resolution: {integrity: sha512-9N8AU9F0ubriKfNE3g1WF0/4dtlGXoBN/hd1PvbNBamBNwRgHxH4P+o3Zt7rSEloW1HUs6LfZEchlx9fW7POYw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@solana/web3.js': ^1.69.0
 
   '@emnapi/runtime@1.4.3':
     resolution: {integrity: sha512-pBPWdu6MLKROBX05wSNKcNb++m5Er+KQ9QkB+WVM+pW2Kx9hoSrVTnu3BdkI5eBLZoKu/J6mW/B6i6bJB2ytXQ==}
@@ -1638,6 +1674,12 @@ packages:
 
   '@keystonehq/sol-keyring@0.20.0':
     resolution: {integrity: sha512-UBeMlecybTDQaFMI951LBEVRyZarqKHOcwWqqvphV+x7WquYz0SZ/wf/PhizV0MWoGTQwt2m5aqROzksi6svqw==}
+
+  '@lazorkit/wallet@1.4.9':
+    resolution: {integrity: sha512-mOcSo3ovUtf0z7A0iOV32mxESLFkTcDEtUCCzUb13D3RAmub3tRVwN+U10xF562u8+igv/oUsDxNYlcKfVrsBQ==}
+    peerDependencies:
+      react: ^18.3.1 || ^19.0.0
+      react-dom: ^18.3.1 || ^19.0.0
 
   '@ledgerhq/devices@8.4.6':
     resolution: {integrity: sha512-EMWhCOC+Ww14i2Dl8Txc0AAw8oToCxt1hOKmE7+yE38SkzfRWS0Je3P+o9/EgkaopI8Y0N8lWOJzy1CiulP3Lg==}
@@ -3804,6 +3846,10 @@ packages:
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
 
+  buffer-layout@1.2.2:
+    resolution: {integrity: sha512-kWSuLN694+KTk8SrYvCqwP2WcgQjoRCiF5b4QDvkkz8EmgD+aWAIceGFKMIAdmF/pH+vpgNV3d3kAKorcdAmWA==}
+    engines: {node: '>=4.5'}
+
   buffer-xor@1.0.3:
     resolution: {integrity: sha512-571s0T7nZWK6vB67HI5dyUF7wXiNcfaPPPTl6zYCNApANjIvYJTg7hlud/+cJpdAhS7dVzqMLmfhfHR3rAcOjQ==}
 
@@ -5300,6 +5346,9 @@ packages:
   js-base64@3.7.7:
     resolution: {integrity: sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==}
 
+  js-sha256@0.11.1:
+    resolution: {integrity: sha512-o6WSo/LUvY2uC4j7mO50a2ms7E/EAdbP0swigLV+nzHKTTaYnaLIWJ02VdXrsJX0vGedDESQnLsOekr94ryfjg==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -5958,6 +6007,9 @@ packages:
 
   package-manager-detector@0.2.11:
     resolution: {integrity: sha512-BEnLolu+yuz22S56CU1SUKq3XC3PkwD5wv4ikR4MfGvnRVcmzXR9DwSlW2fEamyTPyXHomBJRzgapeuBvRNzJQ==}
+
+  pako@2.1.0:
+    resolution: {integrity: sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==}
 
   parcel@2.15.2:
     resolution: {integrity: sha512-+ZFhK66uYSwEju8gd3d1qDrBO9JzUNjySnjVJHm9M2boHVDOJl0ZcMQNHTQD9Oyhcba6sf3yIQecjNK1+UvpWg==}
@@ -6715,6 +6767,9 @@ packages:
   stylis@4.2.0:
     resolution: {integrity: sha512-Orov6g6BB1sDfYgzWfTHDOxamtX1bE/zo104Dh9e6fqJ3PooipYyfJ0pUmrZO2wAvO8YbEyeFrkV91XTsGMSrw==}
 
+  superstruct@0.15.5:
+    resolution: {integrity: sha512-4AOeU+P5UuE/4nOUkmcQdW5y7i9ndt1cQd/3iUe+LTz3RxESf/W/5lg4B74HbDMMv8PHnPnGCQFH45kBcrQYoQ==}
+
   superstruct@2.0.2:
     resolution: {integrity: sha512-uV+TFRZdXsqXTL2pRvujROjdZQ4RAlBUS5BTh9IGm+jTqQntYThciG/qu57Gs69yjnVUSqdxF9YLmSnpupBW9A==}
     engines: {node: '>=14.0.0'}
@@ -7354,6 +7409,24 @@ packages:
   zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
 
+  zustand@5.0.8:
+    resolution: {integrity: sha512-gyPKpIaxY9XcO2vSMrLbiER7QMAMGOQZVRdJ6Zi782jkbzZygq5GI9nG8g+sMgitRtndwaBSl7uiqC49o1SSiw==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+
 snapshots:
 
   '@adraffy/ens-normalize@1.11.0': {}
@@ -7742,6 +7815,35 @@ snapshots:
       fs-extra: 7.0.1
       human-id: 4.1.1
       prettier: 2.8.8
+
+  '@coral-xyz/anchor-errors@0.31.1': {}
+
+  '@coral-xyz/anchor@0.31.1(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@coral-xyz/anchor-errors': 0.31.1
+      '@coral-xyz/borsh': 0.31.1(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@noble/hashes': 1.8.0
+      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      bn.js: 5.2.2
+      bs58: 4.0.1
+      buffer-layout: 1.2.2
+      camelcase: 6.3.0
+      cross-fetch: 3.2.0
+      eventemitter3: 4.0.7
+      pako: 2.1.0
+      superstruct: 0.15.5
+      toml: 3.0.0
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - typescript
+      - utf-8-validate
+
+  '@coral-xyz/borsh@0.31.1(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
+    dependencies:
+      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      bn.js: 5.2.2
+      buffer-layout: 1.2.2
 
   '@emnapi/runtime@1.4.3':
     dependencies:
@@ -8263,6 +8365,25 @@ snapshots:
       - react
       - react-dom
       - typescript
+      - utf-8-validate
+
+  '@lazorkit/wallet@1.4.9(@types/react@19.1.7)(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.2.0(react@19.1.0))(utf-8-validate@5.0.10)':
+    dependencies:
+      '@coral-xyz/anchor': 0.31.1(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      bs58: 6.0.0
+      eventemitter3: 5.0.1
+      js-sha256: 0.11.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      zustand: 5.0.8(@types/react@19.1.7)(react@19.1.0)(use-sync-external-store@1.2.0(react@19.1.0))
+    transitivePeerDependencies:
+      - '@types/react'
+      - bufferutil
+      - encoding
+      - immer
+      - typescript
+      - use-sync-external-store
       - utf-8-validate
 
   '@ledgerhq/devices@8.4.6':
@@ -11957,6 +12078,8 @@ snapshots:
 
   buffer-from@1.1.2: {}
 
+  buffer-layout@1.2.2: {}
+
   buffer-xor@1.0.3: {}
 
   buffer@5.7.1:
@@ -13804,6 +13927,8 @@ snapshots:
 
   js-base64@3.7.7: {}
 
+  js-sha256@0.11.1: {}
+
   js-tokens@4.0.0: {}
 
   js-yaml@3.14.1:
@@ -14575,6 +14700,8 @@ snapshots:
   package-manager-detector@0.2.11:
     dependencies:
       quansync: 0.2.10
+
+  pako@2.1.0: {}
 
   parcel@2.15.2(@swc/helpers@0.5.17):
     dependencies:
@@ -15492,6 +15619,8 @@ snapshots:
 
   stylis@4.2.0: {}
 
+  superstruct@0.15.5: {}
+
   superstruct@2.0.2: {}
 
   supports-color@7.2.0:
@@ -16086,3 +16215,9 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   zod@3.22.4: {}
+
+  zustand@5.0.8(@types/react@19.1.7)(react@19.1.0)(use-sync-external-store@1.2.0(react@19.1.0)):
+    optionalDependencies:
+      '@types/react': 19.1.7
+      react: 19.1.0
+      use-sync-external-store: 1.2.0(react@19.1.0)
