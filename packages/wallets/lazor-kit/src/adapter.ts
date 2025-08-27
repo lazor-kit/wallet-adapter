@@ -264,7 +264,7 @@ export class LazkitWalletAdapter extends BaseMessageSignerWalletAdapter {
         this._lazorkit.on('connect:success', (account: WalletAccount) => {
             this._account = account;
             try {
-                this._publicKey = new PublicKey(account.publicKey);
+                this._publicKey = new PublicKey(account.smartWallet);
                 this.emit('connect', this._publicKey);
             } catch (error: any) {
                 this.emit('error', new WalletPublicKeyError(error?.message, error));
